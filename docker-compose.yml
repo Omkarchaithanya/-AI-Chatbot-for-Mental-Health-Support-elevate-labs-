@@ -1,0 +1,35 @@
+version: "3.9"
+
+services:
+  mindease:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: mindease-pro
+    ports:
+      - "5000:5000"
+    environment:
+      - FLASK_ENV=production
+      - SECRET_KEY=${SECRET_KEY:-change-me-in-production}
+      - PORT=5000
+      - DATABASE_URL=sqlite:////app/backend/data/mindease.db
+      - LOG_FILE=/app/backend/logs/mindease.jsonl
+      - CHAT_MODEL=${CHAT_MODEL:-facebook/blenderbot-400M-distill}
+      - EMOTION_MODEL=${EMOTION_MODEL:-j-hartmann/emotion-english-distilroberta-base}
+      - EMBEDDING_MODEL=${EMBEDDING_MODEL:-sentence-transformers/all-MiniLM-L6-v2}
+      - KNOWLEDGE_BASE_PATH=/app/backend/data/cbt_knowledge_base.json
+      - EMBEDDINGS_CACHE_PATH=/app/backend/data/embeddings_cache.pkl
+    volumes:
+      - mindease_data:/app/backend/data
+      - mindease_logs:/app/backend/logs
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:5000/api/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 60s
+
+volumes:
+  mindease_data:
+  mindease_logs:

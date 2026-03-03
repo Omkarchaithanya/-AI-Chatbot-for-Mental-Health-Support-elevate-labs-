@@ -1,0 +1,535 @@
+[
+  {
+    "id": "cbt_001",
+    "category": "cognitive_restructuring",
+    "title": "Challenging Negative Thoughts",
+    "content": "Negative automatic thoughts (NATs) are involuntary, rapid thoughts that arise in response to situations and significantly affect our mood and behavior. Cognitive restructuring involves identifying these thoughts, evaluating the evidence for and against them, and replacing distorted thoughts with more balanced, realistic ones. The key is to treat thoughts as hypotheses to be tested, not facts to be accepted.",
+    "exercises": [
+      "Write down the negative thought. Ask: 'What is the evidence FOR this thought? Against it?' Then write a balanced alternative.",
+      "Use the ABCDE model: Activating event → Belief (thought) → Consequence (emotion) → Dispute the belief → new Effect/emotion"
+    ],
+    "when_to_use": "When experiencing negative automatic thoughts, catastrophizing, or black-and-white thinking",
+    "example_dialogue": "Therapist: 'You said nobody likes you. What evidence do you have for that?' Client: 'Well, no one called me this week.' Therapist: 'What evidence is there against that thought?'",
+    "keywords": ["negative thoughts", "cognitive distortion", "rumination", "challenge thoughts", "automatic thoughts"]
+  },
+  {
+    "id": "cbt_002",
+    "category": "cognitive_restructuring",
+    "title": "Identifying Cognitive Distortions",
+    "content": "Cognitive distortions are systematic patterns of inaccurate thinking identified by Aaron Beck. Common types include: All-or-nothing thinking (seeing things in black and white), Overgeneralization (one event applies to everything), Mental filter (focusing only on negatives), Disqualifying the positive, Mind reading (assuming others' thoughts), Fortune telling (predicting negatives), Catastrophizing (magnifying problems), Emotional reasoning (feelings equal facts), Should statements, Labeling, and Personalization.",
+    "exercises": [
+      "Keep a thought diary for one week. Note the situation, the thought, and identify which distortion type applies.",
+      "When you notice a troubling thought, ask: Am I engaging in one of the 11 cognitive distortions? Label it."
+    ],
+    "when_to_use": "When noticing distorted thinking patterns impacting mood or behavior",
+    "example_dialogue": "Therapist: 'When you say you are a complete failure, that sounds like labeling and all-or-nothing thinking. What would a more realistic assessment be?'",
+    "keywords": ["cognitive distortions", "all or nothing thinking", "catastrophizing", "overgeneralizing", "distorted thinking"]
+  },
+  {
+    "id": "cbt_003",
+    "category": "cognitive_restructuring",
+    "title": "Behavioral Experiments",
+    "content": "Behavioral experiments are structured activities where you test the accuracy of a belief or prediction by gathering real-world evidence. Unlike pure thought challenging, behavioral experiments provide lived experience that can be more convincing than logical argument alone. They help break the cycle of avoidance that maintains anxiety.",
+    "exercises": [
+      "Identify a belief you want to test. Make a specific prediction about what will happen. Carry out the experiment. Record what actually happened versus what you predicted.",
+      "If you believe 'people will think I'm stupid if I speak up,' experiment by making one comment in a meeting and observe the actual response."
+    ],
+    "when_to_use": "When avoidance or safety behaviors are maintaining anxiety, when beliefs are deeply held and hard to challenge verbally",
+    "example_dialogue": "Therapist: 'You said you believe people laugh at you. Let's design an experiment to test that prediction in real life.'",
+    "keywords": ["behavioral experiment", "testing beliefs", "predictions", "evidence gathering", "avoidance"]
+  },
+  {
+    "id": "cbt_004",
+    "category": "cognitive_restructuring",
+    "title": "Downward Arrow Technique",
+    "content": "The downward arrow technique (developed by David Burns) helps uncover the deep core belief underlying a surface-level automatic thought. By repeatedly asking 'and if that were true, what would that mean?' you drill down to the fundamental belief driving emotional distress. This technique reveals core beliefs such as 'I am worthless' or 'I am unlovable.'",
+    "exercises": [
+      "Start with an automatic thought. Ask yourself: 'If this were true, what would that mean about me or my life?' Keep asking until you reach a fundamental belief.",
+      "Once the core belief is identified, use cognitive restructuring to evaluate its validity and origin."
+    ],
+    "when_to_use": "When surface-level thought challenging doesn't provide relief; to identify core beliefs",
+    "example_dialogue": "Therapist: 'You failed the test. And if that's true, what does that mean?' → 'I'm not smart.' → 'And if that's true?' → 'I'll never succeed.' → 'And that means?' → 'I'm worthless.'",
+    "keywords": ["core beliefs", "downward arrow", "underlying beliefs", "schema", "deep beliefs"]
+  },
+  {
+    "id": "cbt_005",
+    "category": "cognitive_restructuring",
+    "title": "Positive Data Log",
+    "content": "A positive data log is a technique used to challenge negative core beliefs by systematically collecting evidence that contradicts them. Because negative core beliefs cause us to dismiss or ignore positive information, keeping a dedicated log helps counteract this bias over time. Unlike thought records, the positive data log specifically targets the belief level.",
+    "exercises": [
+      "Choose a negative core belief (e.g., 'I am incompetent'). Each day, record one piece of evidence that contradicts this belief, no matter how small.",
+      "Review your log weekly and notice how evidence accumulates against the core belief."
+    ],
+    "when_to_use": "When working on persistent negative core beliefs; as a complement to thought records",
+    "example_dialogue": "Therapist: 'For your belief that you are incompetent, let's track times this week when you handled something competently, no matter how small.'",
+    "keywords": ["positive data", "core belief", "evidence log", "self-worth", "counterevidence"]
+  },
+  {
+    "id": "cbt_006",
+    "category": "cognitive_restructuring",
+    "title": "Pie Chart Technique for Responsibility",
+    "content": "The responsibility pie chart helps correct personalization and over-responsibility cognitive distortions. When someone blames themselves excessively for a negative outcome, they list all contributing factors and assign percentage responsibility to each. The person's own share is assessed last and almost always turns out to be much smaller than initially thought.",
+    "exercises": [
+      "Think of a situation where you're blaming yourself entirely. List ALL factors that contributed to the situation. Assign percentages to each factor. Assign your own percentage last.",
+      "Draw a pie chart with the actual percentages. Notice how much space your responsibility actually takes up."
+    ],
+    "when_to_use": "When experiencing excessive guilt, self-blame, or personalization",
+    "example_dialogue": "Therapist: 'You said the project failure was entirely your fault. Let's list everything else that might have contributed and see how much actually falls on your shoulders.'",
+    "keywords": ["responsibility", "guilt", "self-blame", "personalization", "pie chart"]
+  },
+  {
+    "id": "mind_001",
+    "category": "mindfulness",
+    "title": "Mindful Breathing",
+    "content": "Mindful breathing involves paying full attention to the breath as it moves in and out. It is the foundation of mindfulness practice and one of the most accessible meditation techniques. When the mind wanders (which it will), the practice is to gently notice this and return attention to the breath without judgment. This trains attentional control and reduces rumination.",
+    "exercises": [
+      "Sit comfortably. Focus on the sensation of breathing — the air entering your nostrils, your chest rising, your belly expanding. When thoughts arise, label them 'thinking' and return to the breath. Practice for 5-10 minutes.",
+      "Try breathing in for 4 counts and out for 6 counts, extending the exhale to activate the parasympathetic nervous system."
+    ],
+    "when_to_use": "Daily practice for stress management; during moments of anxiety or overwhelm",
+    "example_dialogue": "Therapist: 'When you notice the panic rising, try anchoring to the breath. Just five breaths can reset the nervous system.'",
+    "keywords": ["breathing", "mindfulness", "meditation", "present moment", "stress relief", "calm down"]
+  },
+  {
+    "id": "mind_002",
+    "category": "mindfulness",
+    "title": "Body Scan Meditation",
+    "content": "Body scan meditation involves slowly moving awareness through the body, noticing physical sensations without trying to change them. Developed as part of Jon Kabat-Zinn's MBSR (Mindfulness-Based Stress Reduction) program, it cultivates interoceptive awareness and helps release tension held in the body. It is especially effective for reducing psychosomatic symptoms of stress.",
+    "exercises": [
+      "Lie down comfortably. Starting at the top of your head, slowly move your attention downward through each body part to your feet. Notice any sensations — tension, warmth, tingling, numbness — without judgment.",
+      "As you notice areas of tension, breathe into them and imagine the tension dissolving with each exhale."
+    ],
+    "when_to_use": "Before sleep; when experiencing body tension or physical symptoms of stress",
+    "example_dialogue": "Therapist: 'Let's try a brief body scan. Notice where you hold tension in your body and just observe it with curiosity rather than trying to fix it.'",
+    "keywords": ["body scan", "meditation", "relaxation", "tension", "MBSR", "sleep", "physical stress"]
+  },
+  {
+    "id": "mind_003",
+    "category": "mindfulness",
+    "title": "Mindful Observation of Thoughts",
+    "content": "This technique involves observing thoughts as mental events rather than facts. Imagine sitting on a riverbank watching thoughts float by like leaves on a stream, or watching clouds pass across the sky. This creates psychological distance (defusion) from thoughts, reducing their emotional impact. It comes from both Mindfulness-Based Cognitive Therapy (MBCT) and Acceptance and Commitment Therapy (ACT).",
+    "exercises": [
+      "Set a timer for 5 minutes. Close your eyes and imagine thoughts as clouds passing through a vast sky. You are the sky, not the clouds.",
+      "When a strong thought appears, say: 'I notice I am having the thought that...' rather than accepting the thought as true."
+    ],
+    "when_to_use": "When overwhelmed by thoughts; during rumination; to reduce fusion with negative thoughts",
+    "example_dialogue": "Therapist: 'Rather than fighting the thought, can you just notice it? Watch it come and then let it go, like a train passing through a station.'",
+    "keywords": ["thought defusion", "mindfulness", "ACT", "observing thoughts", "rumination", "metacognition"]
+  },
+  {
+    "id": "mind_004",
+    "category": "mindfulness",
+    "title": "Mindful Walking",
+    "content": "Mindful walking brings meditative attention to the act of walking, noticing the physical sensations in your feet, legs, and body as you move. It is an excellent alternative for people who find sitting meditation difficult. Regular mindful walking reduces anxiety, improves mood, and connects you to the present moment without requiring any special equipment or setting.",
+    "exercises": [
+      "Walk slowly, noticing the lifting, moving, and placing of each foot. Feel the contact with the ground. Notice the shift in weight. Walk for 10-15 minutes.",
+      "During a regular walk, periodically bring full attention to your senses: sounds around you, sights, the air on your skin. When the mind wanders, gently return."
+    ],
+    "when_to_use": "When restless or unable to sit; as a daily mindfulness practice integrated into routine",
+    "example_dialogue": "Therapist: 'If sitting still feels impossible right now, try mindful walking. Let your walk become the meditation.'",
+    "keywords": ["mindful walking", "outdoor mindfulness", "present moment", "movement", "walking meditation"]
+  },
+  {
+    "id": "mind_005",
+    "category": "mindfulness",
+    "title": "STOP Technique",
+    "content": "STOP is an acronym for a brief mindfulness practice: Stop what you are doing, Take a breath, Observe your thoughts/feelings/sensations without judgment, Proceed with awareness. This micro-practice can be done in seconds anywhere and is particularly useful for breaking the autopilot cycle during stressful moments.",
+    "exercises": [
+      "Set a phone reminder 3 times a day. When it goes off, practice STOP: Stop, Take a breath, Observe (what do you notice in your body? What thoughts are present?), Proceed.",
+      "Use STOP whenever you feel your stress level rising before an important interaction or decision."
+    ],
+    "when_to_use": "During busy or stressful moments; as a quick mindfulness reset throughout the day",
+    "example_dialogue": "Therapist: 'Before your next difficult conversation, try STOP. It takes 30 seconds and can shift your entire state.'",
+    "keywords": ["STOP technique", "mindfulness", "stress", "quick practice", "reset", "pause"]
+  },
+  {
+    "id": "anx_001",
+    "category": "anxiety_management",
+    "title": "Progressive Muscle Relaxation",
+    "content": "Progressive Muscle Relaxation (PMR), developed by Edmund Jacobson, involves systematically tensing and then completely relaxing each muscle group in the body. This contrast between tension and relaxation trains the body to release held tension and activates the parasympathetic nervous system. Regular practice reduces baseline anxiety and improves stress response.",
+    "exercises": [
+      "Starting with your feet, tense the muscles for 5-10 seconds, then release and relax for 20-30 seconds. Notice the difference. Work your way up through calves, thighs, abdomen, hands, arms, shoulders, face.",
+      "Practice PMR daily for 2-4 weeks to see lasting reductions in anxiety baseline."
+    ],
+    "when_to_use": "For generalized anxiety, physical tension, pre-sleep routine, panic disorder management",
+    "example_dialogue": "Therapist: 'Try tensing your fist as hard as you can for 10 seconds... now release. Notice how different relaxation feels compared to that tension.'",
+    "keywords": ["muscle relaxation", "PMR", "tension", "anxiety reduction", "relaxation", "physical anxiety"]
+  },
+  {
+    "id": "anx_002",
+    "category": "anxiety_management",
+    "title": "Worry Time",
+    "content": "Worry time is a CBT technique that involves scheduling a specific 20-30 minute period each day dedicated to worrying. Outside this time, when worry thoughts arise, you postpone them to the scheduled worry time. This technique reduces the generalization of worry throughout the day, breaks the habit of constant rumination, and gives the mind permission to rest between worry sessions.",
+    "exercises": [
+      "Choose a consistent time and place for worry (not near bedtime). Set a 20-minute timer. Write down all your worries. Classify them as practical (can act now) or hypothetical (cannot solve). Problem-solve practical worries.",
+      "When a worry arises outside worry time, write it on a list and tell yourself: 'I'll think about this at 5pm worry time.'"
+    ],
+    "when_to_use": "For generalized anxiety, constant rumination, pervasive worry",
+    "example_dialogue": "Therapist: 'Instead of fighting the worry all day, let's schedule it. Your brain gets worry time, but just 20 minutes at 6pm — not 24 hours.'",
+    "keywords": ["worry time", "scheduled worry", "rumination", "GAD", "generalized anxiety", "postpone worry"]
+  },
+  {
+    "id": "anx_003",
+    "category": "anxiety_management",
+    "title": "Exposure Hierarchy",
+    "content": "Exposure therapy involves gradually confronting feared situations in a systematic way, from least to most anxiety-provoking, without engaging in safety behaviors. The anxiety naturally reduces through habituation and the learning that feared outcomes do not occur (extinction learning). Avoidance maintains anxiety; exposure reduces it.",
+    "exercises": [
+      "Create an anxiety ladder: list 10 feared situations from least (score 2/10) to most feared (10/10). Begin exposure with the lowest item. Stay in the situation until anxiety reduces by at least 50%.",
+      "Practice each step multiple times before progressing. Keep exposure records: situation, anxiety before, peak anxiety, anxiety after."
+    ],
+    "when_to_use": "For phobias, social anxiety, PTSD, OCD, panic disorder with avoidance",
+    "example_dialogue": "Therapist: 'Avoidance feels safe in the moment but teaches your brain to fear more. Exposure teaches it that you can cope.'",
+    "keywords": ["exposure therapy", "fear hierarchy", "avoidance", "phobia", "social anxiety", "systematic desensitization"]
+  },
+  {
+    "id": "anx_004",
+    "category": "anxiety_management",
+    "title": "Decatastrophizing",
+    "content": "Catastrophizing means assuming the worst possible outcome will occur. Decatastrophizing involves examining: What is the most realistic outcome? What is my ability to cope even if the worst happens? This technique reduces the perceived probability and awfulness of feared outcomes.",
+    "exercises": [
+      "Ask yourself: 'What is the absolute worst that could happen? How likely is that, really, on a scale of 0-100%? If it did happen, how would I cope?'",
+      "Think of the best possible outcome, then the most likely (realistic) outcome. Anchor on the realistic."
+    ],
+    "when_to_use": "When catastrophizing or overestimating the probability or impact of negative events",
+    "example_dialogue": "Therapist: 'You said you would die of embarrassment. Let's check: On a scale of 0-100%, how likely is that the meeting goes catastrophically?'",
+    "keywords": ["catastrophizing", "decatastrophizing", "worst case", "realistic thinking", "coping", "anxiety"]
+  },
+  {
+    "id": "anx_005",
+    "category": "anxiety_management",
+    "title": "Interoceptive Exposure",
+    "content": "Interoceptive exposure is used specifically for panic disorder. It involves deliberately inducing the physical sensations associated with panic (heart racing, dizziness, breathlessness) through safe exercises — like spinning in a chair or breathing through a straw. This helps the person learn that the sensations themselves are not dangerous, breaking the fear-of-fear cycle.",
+    "exercises": [
+      "Under guidance, try spinning in a chair for 30 seconds to induce dizziness. Notice the sensation, sit with it, and observe it passing without catastrophizing.",
+      "Breathe through a narrow coffee straw for 30 seconds to simulate breathlessness. Notice anxiety rise and then subside."
+    ],
+    "when_to_use": "For panic disorder; when afraid of physical anxiety sensations",
+    "example_dialogue": "Therapist: 'The goal is to show your brain that these sensations, though uncomfortable, are not dangerous.'",
+    "keywords": ["interoceptive exposure", "panic disorder", "sensations", "fear of fear", "heart pounding", "dizziness"]
+  },
+  {
+    "id": "dep_001",
+    "category": "depression_support",
+    "title": "Behavioral Activation",
+    "content": "Behavioral activation (BA) is one of the most evidence-based treatments for depression. Depression causes withdrawal from activities, and withdrawal deepens depression. BA breaks this cycle by scheduling and engaging in activities that provide pleasure (reward) or a sense of accomplishment (mastery), regardless of motivation. Action comes before motivation in depression — not after.",
+    "exercises": [
+      "Create an activity schedule: list 5 activities you used to enjoy (even slightly). Schedule one small activity each day this week. Rate your mood before and after each activity (0-10).",
+      "Start extremely small — e.g., stepping outside for 5 minutes, texting one friend. Mastery comes from doing, not from waiting to feel like doing."
+    ],
+    "when_to_use": "For depression, low motivation, anhedonia, social withdrawal",
+    "example_dialogue": "Therapist: 'I know you don't feel like doing anything. That's the depression. But if you take a 5-minute walk, your mood will likely shift, even slightly.'",
+    "keywords": ["behavioral activation", "depression", "motivation", "pleasure", "mastery", "activity scheduling", "anhedonia"]
+  },
+  {
+    "id": "dep_002",
+    "category": "depression_support",
+    "title": "Pleasant Events Scheduling",
+    "content": "Depression creates a reinforcement deficit — fewer positive experiences reinforce behavior. Pleasant events scheduling involves deliberately planning activities that were once enjoyed to rebuild the brain's reward pathways. Even if enjoyment is diminished initially, repeated engagement begins to restore sensitivity to positive experiences over time.",
+    "exercises": [
+      "Make a list of 20 activities you have enjoyed at some point in your life (e.g., cooking, listening to music, walking by water). Rate each from 1-5 for current appeal. Schedule 2-3 of the highest-rated activities this week.",
+      "After each activity, journal briefly: what did I do? What did I notice? Was there any moment of positive feeling, even fleeting?"
+    ],
+    "when_to_use": "For depression, anhedonia, boredom, social isolation",
+    "example_dialogue": "Therapist: 'Enjoyment rarely comes first with depression. But showing up to the activity is what matters. The feelings often follow.'",
+    "keywords": ["pleasant activities", "depression treatment", "enjoyment", "reward", "schedule", "fun"]
+  },
+  {
+    "id": "dep_003",
+    "category": "depression_support",
+    "title": "Activity Monitoring and Mood Rating",
+    "content": "Activity monitoring involves recording daily activities alongside mood ratings. This helps identify: which activities improve mood, which deplete it, patterns in timing (morning vs evening), and confirms that activity affects mood (disconfirming 'nothing helps me'). Data gathered informs behavioral activation planning.",
+    "exercises": [
+      "For one week, record each hour: what were you doing? Mood rating (0-10). Pleasure (P 0-10). Mastery/sense of accomplishment (M 0-10).",
+      "Review the week and identify: what activities correlated with higher mood? What time of day felt better? Use this data to plan next week."
+    ],
+    "when_to_use": "Early stage of depression treatment; to identify activity-mood patterns",
+    "example_dialogue": "Therapist: 'Let's collect evidence. We don't know yet whether anything helps your mood — let's find out by tracking it.'",
+    "keywords": ["activity monitoring", "mood rating", "depression diary", "patterns", "mood log", "tracking"]
+  },
+  {
+    "id": "dep_004",
+    "category": "depression_support",
+    "title": "Values Clarification and Committed Action",
+    "content": "From Acceptance and Commitment Therapy (ACT), values clarification helps people identify what truly matters to them across areas of life (relationships, career, health, creativity, community). When life aligns with values, vitality increases. Depression often involves value-action gaps. Committed action means taking steps toward valued living regardless of mood.",
+    "exercises": [
+      "List your top 5 values across these areas: family/relationships, work/career, personal growth, health, community, creativity. For each, rate current alignment (1-10) and identify one small action this week.",
+      "Ask: 'If I were fully well, what would I be doing that I'm not doing now?' Start with the smallest version of that activity."
+    ],
+    "when_to_use": "For depression, lack of meaning, existential emptiness, loss of purpose",
+    "example_dialogue": "Therapist: 'Depression makes everything feel pointless. But your values are still there. What matters to you, even if you can't feel it right now?'",
+    "keywords": ["values", "ACT", "meaning", "purpose", "committed action", "depression", "vitality"]
+  },
+  {
+    "id": "dep_005",
+    "category": "depression_support",
+    "title": "Challenging Depression's Lies",
+    "content": "Depression creates characteristic negative thought patterns: 'things will never improve,' 'I am a burden,' 'I don't deserve good things.' These are symptoms of depression, not truths. This technique applies cognitive restructuring specifically to depression's most common thought patterns to reduce hopelessness and helplessness.",
+    "exercises": [
+      "List 3 of depression's most convincing messages to you. For each: 'What would I say to a dear friend if they said this to me?' Apply that same compassion to yourself.",
+      "Ask: 'Is this a thought or a fact? Is this depression talking?' Label the thought ('Depression is telling me I'm worthless') and evaluate the evidence."
+    ],
+    "when_to_use": "When experiencing hopelessness, worthlessness, or self-attack in depression",
+    "example_dialogue": "Therapist: 'Depression lies. It specializes in convincing you that its distortions are absolute truths. Let's examine the evidence together.'",
+    "keywords": ["depression", "negative thoughts", "hopelessness", "worthlessness", "cognitive therapy", "self-criticism"]
+  },
+  {
+    "id": "sleep_001",
+    "category": "sleep_hygiene",
+    "title": "Sleep Restriction Therapy",
+    "content": "Sleep restriction therapy (SRT), a core component of CBT-I (CBT for Insomnia), involves temporarily restricting time in bed to match actual sleep time. This builds sleep pressure and consolidates fragmented sleep. As efficiency improves, bed time is extended. SRT is more effective than medication for chronic insomnia.",
+    "exercises": [
+      "Calculate your current average sleep time (e.g., 5 hours). Set a fixed wake-up time and set your bedtime so you're in bed for only that duration. Stay awake until bedtime regardless of fatigue.",
+      "When sleep efficiency (time asleep/time in bed) exceeds 85% for 5 days, extend bedtime by 15-20 minutes."
+    ],
+    "when_to_use": "For chronic insomnia, fragmented sleep, early morning waking",
+    "example_dialogue": "Therapist: 'Spending more time in bed when you can't sleep actually worsens insomnia. We build sleep drive by restricting time in bed to match actual sleep.'",
+    "keywords": ["sleep restriction", "insomnia", "CBT-I", "sleep efficiency", "fragmented sleep"]
+  },
+  {
+    "id": "sleep_002",
+    "category": "sleep_hygiene",
+    "title": "Stimulus Control",
+    "content": "Stimulus control re-establishes the association between the bed/bedroom and sleep. Insomnia creates a conditioned arousal response to the bed — lying down becomes associated with wakefulness and worry. Stimulus control breaks this association by restricting bed use to sleep and sex only.",
+    "exercises": [
+      "Use your bed only for sleep and sex. No screens, reading, working, or worrying in bed. If you can't sleep after 20 minutes, get up and go to another room until sleepy.",
+      "Create a consistent wind-down routine: 30 minutes before bed, dim lights, stop screens, do something calm (reading, gentle stretching, warm bath)."
+    ],
+    "when_to_use": "For conditioned insomnia, difficulty falling asleep, bed-anxiety association",
+    "example_dialogue": "Therapist: 'Your brain has learned to associate your bed with wakefulness. We need to retrain that connection.'",
+    "keywords": ["stimulus control", "insomnia", "sleep hygiene", "bed association", "sleep onset", "CBT-I"]
+  },
+  {
+    "id": "sleep_003",
+    "category": "sleep_hygiene",
+    "title": "Sleep Hygiene Principles",
+    "content": "Sleep hygiene refers to behaviors and environmental factors that promote sleep quality. While not sufficient alone for insomnia treatment, good sleep hygiene creates the conditions for better sleep. Key principles: consistent sleep schedule, cool bedroom (65-68°F/18-20°C), complete darkness, no stimulants 6+ hours before bed, regular exercise (not within 4 hours of bed), no alcohol near bedtime.",
+    "exercises": [
+      "Audit your sleep hygiene: Rate each factor (screen use, caffeine, exercise, consistency, environment) and identify your 2 weakest areas to improve this week.",
+      "Set a consistent wake-up time — the same time 7 days a week — as this is the most powerful sleep hygiene intervention."
+    ],
+    "when_to_use": "For mild insomnia, difficulty sleeping, sleep quality concerns",
+    "example_dialogue": "Therapist: 'Let's look at sleep hygiene basics first. Consistent wake time is the single most impactful change you can make.'",
+    "keywords": ["sleep hygiene", "insomnia", "sleep habits", "caffeine", "screens", "consistent schedule"]
+  },
+  {
+    "id": "sleep_004",
+    "category": "sleep_hygiene",
+    "title": "Cognitive Techniques for Insomnia",
+    "content": "Sleep-related worries ('I must get 8 hours or I'll fail tomorrow,' 'I've been awake for an hour, I'll never sleep') fuel arousal and make sleep impossible. Cognitive techniques for insomnia address unhelpful sleep beliefs and catastrophic thinking about sleep deprivation.",
+    "exercises": [
+      "Challenge the belief 'I need 8 hours of sleep.' Research shows significant variation in individual sleep needs. What is the evidence that occasional less sleep is catastrophic vs. inconvenient?",
+      "Practice paradoxical intention: instead of trying to sleep, try to stay awake with your eyes closed. This reduces performance anxiety around sleep."
+    ],
+    "when_to_use": "When worry about sleep is making sleep harder; sleep performance anxiety",
+    "example_dialogue": "Therapist: 'The harder you try to force sleep, the more your brain thinks something's wrong. Let's work with your sleep thoughts, not against sleep itself.'",
+    "keywords": ["sleep beliefs", "insomnia anxiety", "CBT-I", "sleep thoughts", "performance anxiety", "sleep worry"]
+  },
+  {
+    "id": "sleep_005",
+    "category": "sleep_hygiene",
+    "title": "Wind-Down Routine",
+    "content": "A consistent pre-sleep wind-down routine signals to the brain and body that sleep is approaching. The routine activates the parasympathetic nervous system and counters the hyperarousal that characterizes chronic insomnia and stress-related sleep disruption. The key is consistency — the same routine in the same order every night.",
+    "exercises": [
+      "Design a 30-minute wind-down routine: dim all lights, put away screens, do one relaxing activity (reading fiction, gentle yoga, warm bath, journaling), then go to bed at a consistent time.",
+      "Include a worry dump: 10 minutes before bed, write down all worries and tomorrow's tasks. This externalizes concerns and frees mental space for sleep."
+    ],
+    "when_to_use": "For difficulty transitioning from daytime alertness to sleep; onset insomnia",
+    "example_dialogue": "Therapist: 'Your brain needs a transition signal. The routine becomes the cue that sleep is coming.'",
+    "keywords": ["wind-down routine", "bedtime routine", "sleep onset", "relaxation", "pre-sleep", "insomnia"]
+  },
+  {
+    "id": "sc_001",
+    "category": "self_compassion",
+    "title": "Self-Compassion Break",
+    "content": "Developed by Dr. Kristin Neff, the self-compassion break is a brief exercise applying three elements of self-compassion: Mindfulness (acknowledging suffering without over-identifying), Common humanity (recognizing that suffering is part of the shared human experience), and Self-kindness (treating oneself with warmth rather than harsh judgment).",
+    "exercises": [
+      "When struggling, place your hand on your heart and say: 1) 'This is a moment of suffering' (mindfulness), 2) 'Suffering is part of life; I am not alone in this' (common humanity), 3) 'May I give myself the compassion I need' (self-kindness).",
+      "Write a compassionate letter to yourself about a difficulty you're facing, as if writing to a dear struggling friend."
+    ],
+    "when_to_use": "When self-critical, overwhelmed, experiencing failure or shame",
+    "example_dialogue": "Therapist: 'What would you say to a close friend going through exactly what you're going through? Can you offer yourself that same kindness?'",
+    "keywords": ["self-compassion", "self-kindness", "inner critic", "shame", "self-criticism", "Kristin Neff"]
+  },
+  {
+    "id": "sc_002",
+    "category": "self_compassion",
+    "title": "Working with the Inner Critic",
+    "content": "Most people have an inner critic — a harsh internal voice that constantly judges and criticizes. While this voice often assumes it is 'keeping us safe' or 'motivating us,' research consistently shows harsh self-criticism undermines performance and wellbeing. This technique involves identifying the inner critic, understanding its function, and developing an inner coach to replace it.",
+    "exercises": [
+      "Write down the 3 most common self-critical statements your inner voice makes. For each, ask: 'Would I say this to someone I love? What would a caring, encouraging voice say instead?'",
+      "Give your inner critic a name and a character ('The Drill Sergeant,' 'The Perfectionist'). When it speaks, say internally: 'Thank you for your concern, but I'm choosing a different approach.'"
+    ],
+    "when_to_use": "For perfectionism, chronic shame, procrastination driven by fear of failure, imposter syndrome",
+    "example_dialogue": "Therapist: 'The inner critic isn't your enemy — it's a misguided protector. Let's understand what it's protecting you from and find a kinder way to meet that need.'",
+    "keywords": ["inner critic", "self-criticism", "perfectionism", "shame", "self-compassion", "inner coach"]
+  },
+  {
+    "id": "sc_003",
+    "category": "self_compassion",
+    "title": "Loving-Kindness Meditation",
+    "content": "Loving-kindness meditation (Metta) involves cultivating feelings of warmth, goodwill, and compassion — first toward oneself, then toward loved ones, neutral persons, difficult people, and ultimately all beings. Research shows regular practice increases positive affect, reduces self-criticism, increases social connection, and reduces depression and anxiety.",
+    "exercises": [
+      "Sit quietly. Bring to mind a being (a pet, a child, a close friend) for whom you feel unconditional love effortlessly. Feel that warmth. Now gently direct the same warmth toward yourself: 'May I be happy. May I be healthy. May I be safe. May I live with ease.'",
+      "Practise daily for 10 minutes, expanding from self → loved ones → neutral people → difficult people → all beings."
+    ],
+    "when_to_use": "For self-criticism, loneliness, relationship difficulties, depression, compassion fatigue",
+    "example_dialogue": "Therapist: 'Start with yourself. Most people find this the hardest part — which tells us something important about how we treat ourselves.'",
+    "keywords": ["loving kindness", "metta meditation", "compassion", "self-love", "warmth", "social connection"]
+  },
+  {
+    "id": "sc_004",
+    "category": "self_compassion",
+    "title": "Identifying Basic Human Needs",
+    "content": "Self-compassion involves recognizing and honoring your own basic human needs — for rest, connection, safety, meaning, and joy. Many people who struggle with depression or anxiety chronically override their own needs. This technique involves learning to identify, validate, and meet your own needs as a form of self-care and self-respect.",
+    "exercises": [
+      "Check in with yourself daily using: 'What do I need right now?' — physically, emotionally, socially, spiritually. Whatever the answer, validate it without judgment.",
+      "Create a 'needs inventory': List your top 5 unmet needs. For each, identify one small action this week to begin meeting it."
+    ],
+    "when_to_use": "For burnout, over-giving, self-neglect, chronic people-pleasing",
+    "example_dialogue": "Therapist: 'Your needs are not burdens. They are information. What does this difficult feeling tell you about what you need right now?'",
+    "keywords": ["basic needs", "self-care", "burnout", "self-neglect", "needs assessment", "emotional needs"]
+  },
+  {
+    "id": "sc_005",
+    "category": "self_compassion",
+    "title": "Gratitude Practice",
+    "content": "Regular gratitude practice has strong scientific backing for increasing wellbeing, shifting attention from deficit to sufficiency, and improving sleep. Gratitude is not about toxic positivity or denying difficulty — it is about expanding awareness to include what is also going well alongside what is hard.",
+    "exercises": [
+      "Each night, write 3 things you are grateful for and WHY they happened. The 'why' is important — it activates meaning-making neural networks.",
+      "Send one gratitude message per week: a text, email, or letter to someone you appreciate. Research shows this has outsized wellbeing benefits for both sender and receiver."
+    ],
+    "when_to_use": "For depression, negativity bias, low mood, improving general wellbeing",
+    "example_dialogue": "Therapist: 'Gratitude isn't about pretending things are fine. It's about training the spotlight of attention to land on what is good, alongside what is hard.'",
+    "keywords": ["gratitude", "wellbeing", "positive psychology", "three good things", "appreciation", "depression"]
+  },
+  {
+    "id": "ground_001",
+    "category": "grounding_techniques",
+    "title": "5-4-3-2-1 Sensory Grounding",
+    "content": "The 5-4-3-2-1 technique is a rapid grounding exercise using all five senses to anchor awareness in the present moment. It is highly effective for interrupting panic attacks, dissociative episodes, flashbacks, and acute anxiety by redirecting attention from internal distress to external sensory reality.",
+    "exercises": [
+      "Name: 5 things you can SEE, 4 things you can TOUCH/FEEL, 3 things you can HEAR, 2 things you can SMELL, 1 thing you can TASTE.",
+      "For intense moments: Hold a piece of ice, describe its temperature, texture, and the cold sensation spreading through your hand. This physical grounding interrupts panic rapidly."
+    ],
+    "when_to_use": "During panic attacks, dissociation, PTSD flashbacks, acute anxiety or overwhelm",
+    "example_dialogue": "Therapist: 'You are safe right now. Let's use your senses to anchor you here. Tell me 5 things you can see in this room.'",
+    "keywords": ["grounding", "5-4-3-2-1", "panic attack", "dissociation", "senses", "present moment", "safety"]
+  },
+  {
+    "id": "ground_002",
+    "category": "grounding_techniques",
+    "title": "Physical Grounding Techniques",
+    "content": "Physical grounding involves using the body to reconnect to the present. Techniques include: pressing feet firmly into the floor, holding something cold (ice cube), rubbing hands together vigorously, snapping a rubber band on the wrist (gentle), splashing cold water on face, or engaging in brief intense exercise. Physical sensations interrupt the threat-response cycle.",
+    "exercises": [
+      "Right now: Press your feet firmly into the floor. Feel the pressure and temperature. Say: 'I can feel my feet on the floor. I am here, in [location], and I am safe.'",
+      "Hold an ice cube for 30-60 seconds. Focus entirely on the sensation. Notice the stages from cold to painful to numb. This physiologically interrupts panic."
+    ],
+    "when_to_use": "For acute panic, dissociation, flashbacks, emotional overwhelm, self-harm urges",
+    "example_dialogue": "Therapist: 'When words don't help, your body can. Intense physical sensation reaches the brain faster than any thought.'",
+    "keywords": ["physical grounding", "panic", "body", "ice grounding", "feet on floor", "embodiment", "crisis"]
+  },
+  {
+    "id": "ground_003",
+    "category": "grounding_techniques",
+    "title": "Safe Place Visualization",
+    "content": "Safe place visualization involves creating a detailed, multisensory mental image of a place — real or imagined — where you feel completely safe, calm, and at peace. Once established through repeated practice, this mental refuge can be accessed quickly during distress to regulate emotions and calm the nervous system.",
+    "exercises": [
+      "Close your eyes. Imagine a place where you feel completely safe and peaceful. It could be real (a childhood room, a beach) or imaginary. Add details: What do you see? Hear? Smell? Feel? Spend 5-10 minutes exploring it.",
+      "Practice entering your safe place daily during calm moments, so you can access it quickly during distress. Give it a word or image as a cue."
+    ],
+    "when_to_use": "For anxiety, PTSD, before/after trauma processing, for children, intensive anxiety",
+    "example_dialogue": "Therapist: 'Let's create a mental sanctuary you can visit any time. First, tell me about a place — real or imagined — where you have felt safest.'",
+    "keywords": ["safe place", "visualization", "imagery", "PTSD", "sanctuary", "relaxation", "inner resource"]
+  },
+  {
+    "id": "ground_004",
+    "category": "grounding_techniques",
+    "title": "Containment Exercise",
+    "content": "The containment exercise is a trauma-informed technique for temporarily setting aside overwhelming emotions or memories that cannot be fully processed in the moment. You visualize placing the distressing material in a secure, sealed container. This is not avoidance — it is a temporary measure to restore enough regulation to function, with the implicit understanding that the material will be addressed when safe to do so.",
+    "exercises": [
+      "Imagine a container of your choosing — a safe, strong vault; a lockbox; a chest buried underground. Mentally place the distressing image, memory, or feeling inside and close it securely. Notice the sense of manageable distance.",
+      "You can give the box to an imagined trusted guardian to hold, reinforcing that the material is safe but not present."
+    ],
+    "when_to_use": "When overwhelmed by trauma memories or emotions; when ending a therapy session; before sleep",
+    "example_dialogue": "Therapist: 'You don't have to process all of this today. Let's put it somewhere safe for now. What kind of container feels secure to you?'",
+    "keywords": ["containment", "trauma", "grounding", "dissociation", "emotional regulation", "PTSD", "vault"]
+  },
+  {
+    "id": "ground_005",
+    "category": "grounding_techniques",
+    "title": "Orienting to Safety",
+    "content": "Orienting to safety is a somatic technique from Polyvagal Theory. When the nervous system detects threat (real or perceived), it enters fight/flight/freeze. Orienting — slowly scanning the environment for signs of safety — communicates to the nervous system that the current moment is, in fact, safe. This completes the threat response cycle.",
+    "exercises": [
+      "Slowly and deliberately look around the room. Notice exits, objects, colors, people. Say quietly: 'I can see the door. I can see a window. There is no immediate danger here. I am safe.'",
+      "Feel the weight of your body in the chair. Feel your feet on the floor. Name where you are: 'I am in [room/city]. The time is [time]. I am [name]. I am safe.'"
+    ],
+    "when_to_use": "For PTSD hypervigilance, fight/flight activation, flashbacks, chronic anxiety",
+    "example_dialogue": "Therapist: 'Your nervous system is reacting as if there's danger right now. Let's help it get the message that you are actually safe in this moment.'",
+    "keywords": ["orienting", "safety", "polyvagal", "hypervigilance", "trauma", "nervous system", "fight flight"]
+  },
+  {
+    "id": "ba_001",
+    "category": "behavioral_activation",
+    "title": "Activity Scheduling for Mood",
+    "content": "Activity scheduling is the cornerstone of behavioral activation for depression. It involves planning specific activities in advance, rather than waiting for motivation to arise. Activities are categorized as providing pleasure (P) or mastery/achievement (M). A balanced schedule includes both types. Research shows that simply doing activities — even without enjoyment initially — begins to lift mood.",
+    "exercises": [
+      "Using next week's schedule, plan at least 2 pleasure activities and 2 achievement activities per day, however small. Be specific: time and place.",
+      "After each scheduled activity, rate your mood before and after (0-10). Use this data to reinforce that action changes how you feel."
+    ],
+    "when_to_use": "For depression, low motivation, withdrawal, anhedonia",
+    "example_dialogue": "Therapist: 'We're not waiting to feel motivated. We're acting our way into feeling. What's one activity — even tiny — you could schedule tomorrow morning?'",
+    "keywords": ["activity scheduling", "behavioral activation", "depression", "pleasure", "mastery", "motivation", "schedule"]
+  },
+  {
+    "id": "ba_002",
+    "category": "behavioral_activation",
+    "title": "Breaking Tasks into Tiny Steps",
+    "content": "Depression and anxiety make tasks feel overwhelming and insurmountable. Breaking tasks into the smallest possible steps makes them psychologically approachable. The goal is to make the first step so small that resistance evaporates. Each completed micro-step builds momentum and provides small doses of mastery.",
+    "exercises": [
+      "Take one task that feels overwhelming. Break it into 10-20 tiny steps so small they seem almost trivial. Complete only step 1. That's enough for today.",
+      "Use the '2-minute rule': if a step takes less than 2 minutes, do it immediately. String multiple 2-minute steps together to build momentum."
+    ],
+    "when_to_use": "For procrastination, depression-related paralysis, executive function difficulties, overwhelm",
+    "example_dialogue": "Therapist: 'You don't have to clean the whole apartment. Can you put one thing away? Just one? That counts as success today.'",
+    "keywords": ["task breakdown", "procrastination", "small steps", "overwhelm", "depression", "executive function", "momentum"]
+  },
+  {
+    "id": "ba_003",
+    "category": "behavioral_activation",
+    "title": "Social Connection as Antidepressant",
+    "content": "Social isolation is both a cause and consequence of depression. Research consistently shows social connection is one of the most powerful antidepressants available. However, depression creates barriers to connection — fatigue, shame, fear of burdening others. Behavioral activation for social connection involves scheduling brief, low-effort social interactions, building gradually.",
+    "exercises": [
+      "Text or call one person this week, even if just to say hello. You don't need to disclose how you're feeling — just reconnect.",
+      "Join one group activity (class, club, volunteering). The content matters less than the social contact. Start with a single session, no commitment required."
+    ],
+    "when_to_use": "For social withdrawal in depression, loneliness, isolation, social anxiety maintenance",
+    "example_dialogue": "Therapist: 'I know reaching out feels like the last thing you want to do right now. But isolation feeds the depression. One text is enough to start.'",
+    "keywords": ["social connection", "isolation", "depression", "loneliness", "reaching out", "community"]
+  },
+  {
+    "id": "ba_004",
+    "category": "behavioral_activation",
+    "title": "Physical Exercise as Mood Medicine",
+    "content": "Exercise is one of the most well-researched mood interventions, shown to be comparable to antidepressant medication for mild-to-moderate depression and superior for GAD. Even 30 minutes of moderate aerobic exercise three times per week produces significant antidepressant effects through neurogenesis, BDNF release, endorphin release, and improved sleep.",
+    "exercises": [
+      "Start with a 10-minute daily walk. Commit to just 10 minutes — you can always do more. Track mood before and after to recognize the benefit.",
+      "Find an exercise that fits your life: swimming, dancing, cycling, yoga. Social exercise (group class, team sport) amplifies benefits through connection."
+    ],
+    "when_to_use": "For depression, anxiety, low energy, poor sleep, stress",
+    "example_dialogue": "Therapist: 'If exercise were a pill, it would be one of the most prescribed medications in history. The research is that strong.'",
+    "keywords": ["exercise", "physical activity", "depression treatment", "mood", "walking", "antidepressant", "BDNF"]
+  },
+  {
+    "id": "ba_005",
+    "category": "behavioral_activation",
+    "title": "Routine Building for Stability",
+    "content": "Routines provide structure, reduce decision fatigue, and create a scaffold for mood stability. Depression and anxiety disrupt sleep, eating, and activity routines, which in turn worsens symptoms. Rebuilding a minimal viable daily routine — anchor times for waking, meals, and sleep — provides the biological regularity that mood disorders disrupt.",
+    "exercises": [
+      "Identify 3 anchor points for your day: a consistent wake time, a midday check-in, and a wind-down ritual. Commit to these 3 anchors for 2 weeks.",
+      "Design a morning routine of 15-30 minutes that includes at least: getting dressed, eating something, stepping outside or opening a window."
+    ],
+    "when_to_use": "For depression, bipolar disorder, anxiety, disrupted circadian rhythm",
+    "example_dialogue": "Therapist: 'Structure is not a cage — it's scaffolding. Right now, structure will hold you up while you rebuild strength.'",
+    "keywords": ["routine", "structure", "daily schedule", "depression", "stability", "circadian", "morning routine"]
+  }
+]

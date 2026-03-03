@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>MindEase PRO — AI Mental Health Support</title>
+  <meta name="description" content="MindEase PRO — A compassionate AI mental wellness companion with mood tracking, guided exercises, and real-time support." />
+  <meta name="theme-color" content="#1B6CA8" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet" />
+
+  <!-- Chart.js CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+
+  <!-- Socket.IO CDN -->
+  <script src="https://cdn.socket.io/4.7.2/socket.io.min.js"></script>
+
+  <!-- App CSS -->
+  <link rel="stylesheet" href="css/main.css" />
+  <link rel="stylesheet" href="css/chat.css" />
+  <link rel="stylesheet" href="css/dashboard.css" />
+  <link rel="stylesheet" href="css/exercises.css" />
+  <link rel="stylesheet" href="css/profile.css" />
+</head>
+<body>
+
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <!--  APP SHELL                                                  -->
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <div id="app" class="app-shell">
+
+    <!-- ── HEADER ───────────────────────────────────────────── -->
+    <header class="app-header" id="app-header">
+      <div class="header-left">
+        <div class="app-logo">
+          <span class="logo-icon">🧠</span>
+          <span class="logo-text">MindEase<strong>PRO</strong></span>
+        </div>
+      </div>
+      <div class="header-center" id="header-subtitle">
+        <span class="header-title">Good to see you</span>
+      </div>
+      <div class="header-right">
+        <div class="online-indicator" id="online-indicator" title="Connected">
+          <span class="online-dot"></span>
+          <span class="online-label">Live</span>
+        </div>
+        <button class="icon-btn" id="settings-btn" aria-label="Settings" title="Settings">⚙️</button>
+      </div>
+    </header>
+
+    <!-- ── CRISIS BANNER ─────────────────────────────────────── -->
+    <div class="crisis-banner" id="crisis-banner" hidden>
+      <div class="crisis-content">
+        <span class="crisis-icon">🚨</span>
+        <div class="crisis-text">
+          <strong>Crisis Resources:</strong>
+          988 Suicide &amp; Crisis Lifeline — call/text <a href="tel:988">988</a> &nbsp;|&nbsp;
+          Crisis Text Line — text HOME to <strong>741741</strong> &nbsp;|&nbsp;
+          Emergency: <a href="tel:911">911</a>
+        </div>
+      </div>
+      <button class="crisis-dismiss" id="crisis-dismiss" aria-label="Dismiss">✕</button>
+    </div>
+
+    <!-- ── VIEW CONTAINER ────────────────────────────────────── -->
+    <main class="view-container" id="view-container">
+
+      <!-- ═══════════ VIEW: CHAT ═══════════ -->
+      <section class="view" id="view-chat" data-view="chat">
+
+        <!-- Emotion Indicator -->
+        <div class="emotion-indicator" id="emotion-indicator" hidden>
+          <span class="emotion-pill" id="emotion-pill">
+            <span id="emotion-emoji">😐</span>
+            <span id="emotion-label">Neutral</span>
+            <span class="emotion-confidence" id="emotion-confidence"></span>
+          </span>
+        </div>
+
+        <!-- Chat Messages -->
+        <div class="chat-window" id="chat-window" role="log" aria-live="polite" aria-label="Conversation">
+          <!-- Welcome message -->
+          <div class="message bot-message" data-id="welcome">
+            <div class="message-avatar">🧠</div>
+            <div class="message-bubble">
+              <p>Hi there. I'm <strong>MindEase</strong>, your compassionate AI wellness companion.</p>
+              <p>I'm here to listen, support, and help you — whether you need to talk, explore your feelings, or try a calming exercise.</p>
+              <p>How are you feeling today?</p>
+              <div class="message-meta">
+                <span class="message-time" id="welcome-time"></span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Typing Indicator (hidden by default, shown while AI responds) -->
+          <div class="typing-indicator" id="typing-indicator" style="display:none;" aria-label="AI is thinking">
+            <div class="message-avatar">🧠</div>
+            <div class="message-bubble">
+              <div class="typing-dots">
+                <span></span><span></span><span></span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Exercise Suggestion Card -->
+        <div class="exercise-suggestion-card" id="exercise-suggestion-card" hidden>
+          <span class="suggestion-icon">🌿</span>
+          <div class="suggestion-text">
+            <strong id="suggestion-title">Try a breathing exercise?</strong>
+            <span id="suggestion-desc">It only takes 4 minutes</span>
+          </div>
+          <button class="suggestion-open-btn" id="suggestion-open-btn">Open →</button>
+          <button class="suggestion-dismiss" id="suggestion-dismiss" aria-label="Dismiss">✕</button>
+        </div>
+
+        <!-- Chat Input Bar -->
+        <div class="chat-input-area">
+          <button class="icon-btn voice-btn" id="voice-btn" aria-label="Voice input" title="Voice input">🎙️</button>
+          <div class="input-wrapper">
+            <textarea
+              id="chat-input"
+              class="chat-textarea"
+              placeholder="Share what's on your mind…"
+              rows="1"
+              maxlength="2000"
+              aria-label="Type your message"
+            ></textarea>
+          </div>
+          <button class="icon-btn tts-btn" id="tts-btn" aria-label="Toggle text-to-speech" title="Text-to-speech">🔇</button>
+          <button class="send-btn" id="send-btn" aria-label="Send message" disabled>
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+              <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/>
+            </svg>
+          </button>
+        </div>
+
+      </section>
+
+      <!-- ═══════════ VIEW: MOOD DASHBOARD ═══════════ -->
+      <section class="view" id="view-mood" data-view="mood" hidden>
+        <div class="dashboard-container">
+
+          <!-- Summary Cards -->
+          <div class="summary-cards" id="summary-cards">
+            <div class="summary-card" id="card-today">
+              <div class="card-icon">🌡️</div>
+              <div class="card-body">
+                <div class="card-label">Today's Mood</div>
+                <div class="card-value" id="today-mood">—</div>
+              </div>
+            </div>
+            <div class="summary-card" id="card-trend">
+              <div class="card-icon">📈</div>
+              <div class="card-body">
+                <div class="card-label">7-Day Trend</div>
+                <div class="card-value" id="trend-value">—</div>
+              </div>
+            </div>
+            <div class="summary-card" id="card-sessions">
+              <div class="card-icon">💬</div>
+              <div class="card-body">
+                <div class="card-label">Total Messages</div>
+                <div class="card-value" id="total-messages">0</div>
+              </div>
+            </div>
+            <div class="summary-card" id="card-streak">
+              <div class="card-icon">🔥</div>
+              <div class="card-body">
+                <div class="card-label">Active Days</div>
+                <div class="card-value" id="streak-days">0</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Timeline Chart -->
+          <div class="chart-card">
+            <div class="chart-header">
+              <h3>Mood Timeline</h3>
+              <div class="chart-controls">
+                <button class="chart-range-btn active" data-days="7">7d</button>
+                <button class="chart-range-btn" data-days="14">14d</button>
+                <button class="chart-range-btn" data-days="30">30d</button>
+              </div>
+            </div>
+            <div class="chart-wrapper">
+              <canvas id="mood-timeline-chart" aria-label="Mood timeline chart"></canvas>
+            </div>
+          </div>
+
+          <!-- Emotion Donut -->
+          <div class="chart-card chart-card--half">
+            <div class="chart-header">
+              <h3>Emotion Breakdown</h3>
+            </div>
+            <div class="chart-wrapper chart-wrapper--donut">
+              <canvas id="emotion-donut-chart" aria-label="Emotion distribution chart"></canvas>
+            </div>
+          </div>
+
+          <!-- Insights -->
+          <div class="insights-card chart-card--half">
+            <div class="chart-header">
+              <h3>AI Insights</h3>
+              <button class="refresh-btn" id="refresh-insights" aria-label="Refresh insights">🔄</button>
+            </div>
+            <div class="insights-list" id="insights-list">
+              <div class="insight-loading">Loading insights…</div>
+            </div>
+          </div>
+
+          <!-- Export -->
+          <div class="export-section">
+            <button class="export-btn" id="export-journal-btn">
+              📄 Export Journal
+            </button>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ═══════════ VIEW: EXERCISES ═══════════ -->
+      <section class="view" id="view-exercises" data-view="exercises" hidden>
+        <div class="exercises-container">
+          <div class="exercises-header">
+            <h2>Guided Exercises</h2>
+            <p>Evidence-based techniques for calm, focus, and resilience</p>
+          </div>
+          <div class="exercise-grid" id="exercise-grid">
+            <!-- Populated by exercises.js -->
+            <div class="exercise-loading">Loading exercises…</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ═══════════ VIEW: PROFILE ═══════════ -->
+      <section class="view" id="view-profile" data-view="profile" hidden>
+        <div class="profile-container">
+          <div class="profile-header">
+            <div class="profile-avatar">🧠</div>
+            <div class="profile-info">
+              <h2>Your Session</h2>
+              <p class="session-id-display" id="session-id-display">—</p>
+            </div>
+          </div>
+
+          <!-- Stats -->
+          <div class="profile-card">
+            <h3>Session Stats</h3>
+            <div class="stats-grid" id="profile-stats">
+              <div class="stat-item"><div class="stat-val" id="stat-messages">0</div><div class="stat-label">Messages</div></div>
+              <div class="stat-item"><div class="stat-val" id="stat-exercises">0</div><div class="stat-label">Exercises</div></div>
+              <div class="stat-item"><div class="stat-val" id="stat-days">0</div><div class="stat-label">Days Active</div></div>
+              <div class="stat-item"><div class="stat-val" id="stat-emotion">—</div><div class="stat-label">Top Emotion</div></div>
+            </div>
+          </div>
+
+          <!-- Preferences -->
+          <div class="profile-card">
+            <h3>Preferences</h3>
+
+            <div class="pref-row">
+              <label class="pref-label" for="tone-select">Response Tone</label>
+              <select class="pref-select" id="tone-select">
+                <option value="empathetic">Empathetic</option>
+                <option value="professional">Professional</option>
+                <option value="friendly">Friendly</option>
+                <option value="gentle">Gentle</option>
+                <option value="validating">Validating</option>
+                <option value="balanced">Balanced</option>
+              </select>
+            </div>
+
+            <div class="pref-row">
+              <label class="pref-label" for="tts-toggle">Text-to-Speech</label>
+              <label class="toggle-switch">
+                <input type="checkbox" id="tts-toggle" />
+                <span class="toggle-slider"></span>
+              </label>
+            </div>
+
+            <div class="pref-row" id="tts-lang-row" hidden>
+              <label class="pref-label" for="tts-lang-select">TTS Language</label>
+              <select class="pref-select" id="tts-lang-select">
+                <option value="en">English</option>
+                <option value="hi">Hindi — हिन्दी</option>
+                <option value="kn">Kannada — ಕನ್ನಡ</option>
+                <option value="ta">Tamil — தமிழ்</option>
+                <option value="te">Telugu — తెలుగు</option>
+              </select>
+            </div>
+
+            <button class="pref-save-btn" id="pref-save-btn">Save Preferences</button>
+            <span class="pref-status" id="pref-status" style="display:none; margin-left:10px; font-size:0.85rem;"></span>
+          </div>
+
+          <!-- Data -->
+          <div class="profile-card">
+            <h3>Data</h3>
+            <div class="data-actions">
+              <button class="data-btn data-btn--export" id="export-data-btn">📥 Export My Data</button>
+              <button class="data-btn data-btn--danger" id="clear-history-btn">🗑️ Clear Session History</button>
+            </div>
+          </div>
+
+          <!-- Crisis Resources (always visible) -->
+          <div class="crisis-resources-card">
+            <h3>🆘 Crisis Resources</h3>
+            <div class="resource-list">
+              <a class="resource-item" href="tel:988">
+                <span class="resource-icon">📞</span>
+                <div><strong>988 Lifeline</strong><br>Call or text 988 (24/7)</div>
+              </a>
+              <a class="resource-item" href="sms:741741?body=HOME">
+                <span class="resource-icon">💬</span>
+                <div><strong>Crisis Text Line</strong><br>Text HOME to 741741</div>
+              </a>
+              <a class="resource-item" href="https://www.nami.org/help" target="_blank" rel="noopener">
+                <span class="resource-icon">🌐</span>
+                <div><strong>NAMI Helpline</strong><br>1-800-950-6264</div>
+              </a>
+              <a class="resource-item" href="tel:911">
+                <span class="resource-icon">🚨</span>
+                <div><strong>Emergency</strong><br>Call 911</div>
+              </a>
+            </div>
+          </div>
+
+          <!-- Disclaimer -->
+          <p class="disclaimer">
+            MindEase PRO is a supportive tool, not a substitute for professional mental health care.
+            If you are in crisis, please contact a qualified professional or emergency services immediately.
+          </p>
+
+        </div>
+      </section>
+
+    </main>
+
+    <!-- ── BOTTOM NAVIGATION ──────────────────────────────────── -->
+    <nav class="bottom-nav" role="navigation" aria-label="Main navigation">
+      <button class="nav-btn active" data-target="chat" aria-label="Chat" aria-current="page">
+        <span class="nav-icon">💬</span>
+        <span class="nav-label">Chat</span>
+        <span class="nav-dot"></span>
+      </button>
+      <button class="nav-btn" data-target="mood" aria-label="Mood Dashboard">
+        <span class="nav-icon">📊</span>
+        <span class="nav-label">Mood</span>
+        <span class="nav-dot"></span>
+      </button>
+      <button class="nav-btn" data-target="exercises" aria-label="Exercises">
+        <span class="nav-icon">🌿</span>
+        <span class="nav-label">Exercises</span>
+        <span class="nav-dot"></span>
+      </button>
+      <button class="nav-btn" data-target="profile" aria-label="Profile">
+        <span class="nav-icon">👤</span>
+        <span class="nav-label">Profile</span>
+        <span class="nav-dot"></span>
+      </button>
+    </nav>
+
+  </div><!-- /#app -->
+
+  <!-- ══════════════════════════════════════════════════════════ -->
+  <!--  EXERCISE PLAYER OVERLAY                                   -->
+  <!-- ══════════════════════════════════════════════════════════ -->
+  <div class="exercise-overlay" id="exercise-overlay" hidden aria-modal="true" role="dialog" aria-label="Exercise Player">
+    <div class="exercise-player">
+      <div class="exercise-player-header">
+        <button class="close-exercise-btn" id="close-exercise-btn" aria-label="Close exercise">✕</button>
+        <h2 class="exercise-title" id="exercise-title">Exercise</h2>
+        <span class="exercise-category-badge" id="exercise-category-badge">breathing</span>
+      </div>
+
+      <!-- Breathing animations -->
+      <div class="breathing-section" id="breathing-section" hidden>
+        <div class="breathing-circle-container">
+          <div class="breathing-circle" id="breathing-circle">
+            <span class="breathing-phase-text" id="breathing-phase-text">Ready</span>
+            <span class="breathing-countdown" id="breathing-countdown"></span>
+          </div>
+          <svg class="progress-ring" id="progress-ring" viewBox="0 0 180 180">
+            <circle class="progress-ring-track" cx="90" cy="90" r="82"/>
+            <circle class="progress-ring-fill" id="progress-ring-fill" cx="90" cy="90" r="82"/>
+          </svg>
+        </div>
+        <p class="breathing-instruction" id="breathing-instruction"></p>
+        <div class="cycle-tracker">
+          <span>Cycle <span id="current-cycle">0</span> / <span id="total-cycles">4</span></span>
+        </div>
+      </div>
+
+      <!-- Step-by-step section -->
+      <div class="step-section" id="step-section" hidden>
+        <div class="step-indicator">
+          <span>Step <span id="current-step">1</span> of <span id="total-steps">5</span></span>
+          <div class="step-progress-bar"><div class="step-progress-fill" id="step-progress-fill"></div></div>
+        </div>
+        <div class="step-content-area" id="step-content-area"></div>
+      </div>
+
+      <!-- Controls -->
+      <div class="exercise-controls" id="exercise-controls">
+        <button class="ex-ctrl-btn ex-ctrl-start" id="exercise-start-btn">▶ Start</button>
+        <button class="ex-ctrl-btn ex-ctrl-skip" id="exercise-skip-btn" hidden>Skip</button>
+        <button class="ex-ctrl-btn ex-ctrl-next" id="exercise-next-btn" hidden>Next →</button>
+      </div>
+
+      <!-- Completion -->
+      <div class="exercise-complete" id="exercise-complete" hidden>
+        <div class="confetti" id="confetti" aria-hidden="true"></div>
+        <div class="complete-content">
+          <div class="complete-icon">✅</div>
+          <h3>Well done!</h3>
+          <p id="complete-message">You completed the exercise.</p>
+          <button class="ex-ctrl-btn ex-ctrl-start" id="exercise-done-btn">Return</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════════════════════════ -->
+  <!--  SETTINGS PANEL                                            -->
+  <!-- ══════════════════════════════════════════════════════════ -->
+  <div class="settings-overlay" id="settings-overlay" hidden>
+    <div class="settings-panel">
+      <div class="settings-header">
+        <h2>Settings</h2>
+        <button class="close-settings-btn" id="close-settings-btn" aria-label="Close settings">✕</button>
+      </div>
+      <div class="setting-row">
+        <label for="settings-tone">Response Tone</label>
+        <select id="settings-tone">
+          <option value="empathetic">Empathetic</option>
+          <option value="professional">Professional</option>
+          <option value="friendly">Friendly</option>
+        </select>
+      </div>
+      <div class="setting-row">
+        <label for="settings-tts">Text-to-Speech</label>
+        <label class="toggle-switch">
+          <input type="checkbox" id="settings-tts" />
+          <span class="toggle-slider"></span>
+        </label>
+      </div>
+    </div>
+  </div>
+
+  <!-- App JS (defer load order) -->
+  <script src="js/socket.js"></script>
+  <script src="js/voice.js"></script>
+  <script src="js/exercises.js"></script>
+  <script src="js/dashboard.js"></script>
+  <script src="js/profile.js"></script>
+  <script src="js/chat.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

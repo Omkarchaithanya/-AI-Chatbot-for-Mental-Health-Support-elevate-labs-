@@ -1,0 +1,511 @@
+/* ═══════════════════════════════════════════════
+   MindEase PRO — Exercises Styles
+   ═══════════════════════════════════════════════ */
+
+/* ── Exercises View ─────────────────────────────── */
+.exercises-container {
+  padding: 16px;
+  padding-bottom: 24px;
+}
+
+.exercises-intro {
+  font-size: 14px;
+  color: var(--color-text-muted);
+  margin-bottom: 16px;
+  line-height: 1.5;
+}
+
+/* ── Exercise Grid ──────────────────────────────── */
+.exercise-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.exercise-card {
+  background: var(--color-surface);
+  border: 1.5px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: 16px 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 8px;
+  cursor: pointer;
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast), border-color var(--transition-fast);
+  box-shadow: var(--shadow-xs);
+  position: relative;
+  overflow: hidden;
+}
+
+.exercise-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  background: linear-gradient(135deg, rgba(27,108,168,0.06), rgba(93,92,222,0.06));
+  transition: opacity var(--transition-fast);
+}
+
+.exercise-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-sm);
+  border-color: var(--color-primary);
+}
+
+.exercise-card:hover::before {
+  opacity: 1;
+}
+
+.exercise-card:active {
+  transform: translateY(0px);
+}
+
+.exercise-emoji {
+  font-size: 32px;
+  line-height: 1;
+}
+
+.exercise-name {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--color-text);
+  line-height: 1.3;
+}
+
+.exercise-meta {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.exercise-duration {
+  font-size: 11px;
+  color: var(--color-text-muted);
+  display: flex;
+  align-items: center;
+  gap: 3px;
+}
+
+.exercise-tag {
+  font-size: 10px;
+  font-weight: 600;
+  padding: 2px 7px;
+  border-radius: var(--radius-full);
+  background: rgba(27,108,168,0.1);
+  color: var(--color-primary);
+}
+
+.exercise-completed-badge {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  font-size: 14px;
+  opacity: 0;
+  transform: scale(0);
+  transition: all var(--transition-fast);
+}
+
+.exercise-card.completed .exercise-completed-badge {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* ── Exercise Overlay ───────────────────────────── */
+.exercise-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.75);
+  z-index: 300;
+  display: flex;
+  align-items: flex-end;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity var(--transition-md);
+}
+
+.exercise-overlay.open {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.exercise-overlay[hidden] {
+  display: none !important;
+}
+
+.exercise-player {
+  width: 100%;
+  max-height: 92vh;
+  background: var(--color-bg);
+  border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+  overflow-y: auto;
+  transform: translateY(100%);
+  transition: transform var(--transition-md);
+  padding: 20px 16px 32px;
+  display: flex;
+  flex-direction: column;
+}
+
+.exercise-overlay.open .exercise-player {
+  transform: translateY(0);
+}
+
+.exercise-player-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.exercise-player-header h2 {
+  font-size: 18px;
+  font-weight: 700;
+  font-family: var(--font-display);
+  color: var(--color-text);
+}
+
+.close-exercise-btn {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 1.5px solid var(--color-border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  color: var(--color-text-muted);
+  transition: all var(--transition-fast);
+}
+
+.close-exercise-btn:hover {
+  border-color: var(--color-negative);
+  color: var(--color-negative);
+}
+
+/* ── Breathing Circle ───────────────────────────── */
+.breathing-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 20px 0;
+}
+
+.breathing-circle-wrapper {
+  position: relative;
+  width: 120px;
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Use transform (not width/height) for iOS Safari compatibility */
+.breathing-circle {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 35% 35%, #5DB8F7, #1B6CA8);
+  box-shadow: 0 0 0 0 rgba(27,108,168,0.3);
+  transform: scale(1);
+  will-change: transform;
+  transition: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.breathing-circle span {
+  font-size: 30px;
+  line-height: 1;
+}
+
+/* Breathing phase animations — transform-based for Safari */
+.breathing-circle.inhale {
+  animation: breathe-in 4s ease-in-out forwards;
+}
+
+.breathing-circle.hold {
+  animation: breathe-hold 7s linear forwards;
+}
+
+.breathing-circle.exhale {
+  animation: breathe-out 8s ease-in-out forwards;
+}
+
+@keyframes breathe-in {
+  from {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(27,108,168,0.3);
+  }
+  to {
+    transform: scale(1.6);
+    box-shadow: 0 0 0 20px rgba(27,108,168,0.0);
+  }
+}
+
+@keyframes breathe-hold {
+  from  { transform: scale(1.6); }
+  to    { transform: scale(1.6); }
+}
+
+@keyframes breathe-out {
+  from {
+    transform: scale(1.6);
+    box-shadow: 0 0 0 20px rgba(27,108,168,0.0);
+  }
+  to {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(27,108,168,0.1);
+  }
+}
+
+.breathing-label {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--color-primary);
+  font-family: var(--font-display);
+  letter-spacing: 0.3px;
+  min-height: 30px;
+  display: flex;
+  align-items: center;
+}
+
+.breathing-counter {
+  font-size: 14px;
+  color: var(--color-text-muted);
+}
+
+/* ── Progress Ring ──────────────────────────────── */
+.progress-ring-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 0;
+}
+
+.progress-ring-svg {
+  transform: rotate(-90deg);
+}
+
+.progress-ring-bg {
+  fill: none;
+  stroke: var(--color-border);
+  stroke-width: 4;
+}
+
+.progress-ring-fill {
+  fill: none;
+  stroke: var(--color-primary);
+  stroke-width: 4;
+  stroke-linecap: round;
+  stroke-dasharray: 264; /* 2π × 42 ≈ 264 */
+  stroke-dashoffset: 264;
+  transition: stroke-dashoffset 0.9s ease;
+}
+
+.progress-ring-text {
+  position: absolute;
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--color-text);
+}
+
+/* ── Step-by-Step ───────────────────────────────── */
+.steps-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.step-item {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  position: relative;
+  padding-bottom: 16px;
+}
+
+.step-item:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  left: 15px;
+  top: 32px;
+  bottom: 0;
+  width: 2px;
+  background: var(--color-border);
+}
+
+.step-number {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: var(--color-border);
+  color: var(--color-text-muted);
+  font-size: 13px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  position: relative;
+  z-index: 1;
+  transition: all var(--transition-fast);
+}
+
+.step-item.active .step-number {
+  background: var(--color-primary);
+  color: white;
+  box-shadow: 0 0 0 4px rgba(27,108,168,0.2);
+}
+
+.step-item.done .step-number {
+  background: var(--color-positive);
+  color: white;
+}
+
+.step-content { flex: 1; padding-top: 4px; }
+
+.step-title {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--color-text);
+  margin-bottom: 2px;
+}
+
+.step-desc {
+  font-size: 13px;
+  color: var(--color-text-muted);
+  line-height: 1.5;
+}
+
+.step-timer {
+  font-size: 12px;
+  color: var(--color-primary);
+  font-weight: 600;
+  margin-top: 4px;
+}
+
+/* ── Exercise Controls ──────────────────────────── */
+.exercise-controls {
+  display: flex;
+  gap: 10px;
+  padding-top: 16px;
+  justify-content: center;
+}
+
+.exercise-ctrl-btn {
+  padding: 12px 24px;
+  border-radius: var(--radius-full);
+  font-size: 14px;
+  font-weight: 600;
+  transition: all var(--transition-fast);
+  flex: 1;
+  max-width: 160px;
+}
+
+.exercise-ctrl-btn.primary {
+  background: var(--color-primary);
+  color: white;
+  box-shadow: 0 4px 12px rgba(27,108,168,0.3);
+}
+
+.exercise-ctrl-btn.primary:hover {
+  background: var(--color-primary-dark);
+  box-shadow: 0 6px 16px rgba(27,108,168,0.4);
+}
+
+.exercise-ctrl-btn.secondary {
+  border: 1.5px solid var(--color-border);
+  color: var(--color-text-muted);
+}
+
+.exercise-ctrl-btn.secondary:hover {
+  border-color: var(--color-text-muted);
+  color: var(--color-text);
+}
+
+/* ── Completion Screen ──────────────────────────── */
+.completion-screen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 12px;
+  padding: 30px 0;
+  animation: message-enter 0.5s ease forwards;
+}
+
+.completion-emoji {
+  font-size: 56px;
+  animation: completion-bounce 0.6s cubic-bezier(0.36, 0.07, 0.19, 0.97) forwards;
+}
+
+@keyframes completion-bounce {
+  0%   { transform: scale(0); }
+  50%  { transform: scale(1.3); }
+  75%  { transform: scale(0.9); }
+  100% { transform: scale(1); }
+}
+
+.completion-title {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--color-text);
+  font-family: var(--font-display);
+}
+
+.completion-subtitle {
+  font-size: 14px;
+  color: var(--color-text-muted);
+  line-height: 1.5;
+  max-width: 260px;
+}
+
+/* ── Confetti Particles ─────────────────────────── */
+.confetti-container {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 500;
+  overflow: hidden;
+}
+
+.confetti-piece {
+  position: absolute;
+  top: -20px;
+  width: 10px;
+  height: 10px;
+  border-radius: 2px;
+  animation: confetti-fall 3s ease-in forwards;
+}
+
+.confetti-piece:nth-child(1)  { left: 5%;  background:#F94144; animation-delay:0s;    transform: rotate(15deg); }
+.confetti-piece:nth-child(2)  { left: 10%; background:#F3722C; animation-delay:0.1s;  transform: rotate(-20deg); }
+.confetti-piece:nth-child(3)  { left: 20%; background:#F8961E; animation-delay:0.2s;  border-radius: 50%; }
+.confetti-piece:nth-child(4)  { left: 30%; background:#F9C74F; animation-delay:0s;    transform: rotate(45deg); }
+.confetti-piece:nth-child(5)  { left: 40%; background:#90BE6D; animation-delay:0.15s; }
+.confetti-piece:nth-child(6)  { left: 50%; background:#43AA8B; animation-delay:0.05s; transform: rotate(-30deg); }
+.confetti-piece:nth-child(7)  { left: 60%; background:#4D908E; animation-delay:0.25s; border-radius: 50%; }
+.confetti-piece:nth-child(8)  { left: 70%; background:#577590; animation-delay:0s;    transform: rotate(60deg); }
+.confetti-piece:nth-child(9)  { left: 80%; background:#277DA1; animation-delay:0.2s;  }
+.confetti-piece:nth-child(10) { left: 90%; background:#F94144; animation-delay:0.1s;  transform: rotate(-45deg); }
+.confetti-piece:nth-child(11) { left: 15%; background:#5D5CDE; animation-delay:0.3s;  border-radius: 50%; }
+.confetti-piece:nth-child(12) { left: 25%; background:#F3722C; animation-delay:0.05s; }
+.confetti-piece:nth-child(13) { left: 35%; background:#90BE6D; animation-delay:0.35s; transform: rotate(30deg); }
+.confetti-piece:nth-child(14) { left: 45%; background:#F8961E; animation-delay:0.15s; border-radius: 50%; }
+.confetti-piece:nth-child(15) { left: 55%; background:#F9C74F; animation-delay:0s;    transform: rotate(-15deg); }
+.confetti-piece:nth-child(16) { left: 65%; background:#43AA8B; animation-delay:0.25s; }
+.confetti-piece:nth-child(17) { left: 75%; background:#277DA1; animation-delay:0.1s;  transform: rotate(50deg); }
+.confetti-piece:nth-child(18) { left: 85%; background:#F94144; animation-delay:0.2s;  border-radius: 50%; }
+.confetti-piece:nth-child(19) { left: 95%; background:#5D5CDE; animation-delay:0.05s; }
+.confetti-piece:nth-child(20) { left: 50%; background:#F3722C; animation-delay:0.3s;  transform: rotate(-60deg); }
+
+@keyframes confetti-fall {
+  0%   { transform: translateY(0)    rotate(0deg)   scale(1); opacity: 1; }
+  80%  { opacity: 1; }
+  100% { transform: translateY(110vh) rotate(720deg) scale(0.5); opacity: 0; }
+}

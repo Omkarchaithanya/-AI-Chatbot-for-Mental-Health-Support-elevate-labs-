@@ -1,0 +1,54 @@
+# ── Python ──────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.egg-info/
+dist/
+build/
+.eggs/
+*.egg
+
+# ── Virtual environments ─────────────────────────────
+venv/
+.venv/
+env/
+.env
+
+# ── Environment config ────────────────────────────────
+.env
+*.env.local
+
+# ── Database ──────────────────────────────────────────
+*.db
+*.sqlite
+*.sqlite3
+
+# ── Logs & caches ─────────────────────────────────────
+backend/logs/*.jsonl
+backend/data/embeddings_cache.pkl
+*.log
+
+# ── HuggingFace model downloads ───────────────────────
+backend/models/
+*.bin
+*.safetensors
+*.pt
+*.pth
+
+# ── OS/IDE ────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# ── Test artefacts ────────────────────────────────────
+.pytest_cache/
+.coverage
+coverage.xml
+htmlcov/
+
+# ── Node (if any tooling added later) ────────────────
+node_modules/
