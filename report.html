@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<title>MindEase PRO — Project Report</title>
+<style>
+  @page { size: A4; margin: 18mm 20mm; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    font-size: 10.5pt;
+    color: #1a1a2e;
+    line-height: 1.55;
+    background: #fff;
+  }
+
+  /* ── Header ── */
+  .header {
+    text-align: center;
+    padding-bottom: 10px;
+    border-bottom: 2.5px solid #1B6CA8;
+    margin-bottom: 12px;
+  }
+  .header h1 {
+    font-size: 20pt;
+    font-weight: 800;
+    color: #1B6CA8;
+    letter-spacing: -0.5px;
+  }
+  .header .subtitle {
+    font-size: 9.5pt;
+    color: #555;
+    margin-top: 3px;
+  }
+  .meta-row {
+    display: flex;
+    justify-content: center;
+    gap: 28px;
+    margin-top: 6px;
+    font-size: 8.8pt;
+    color: #666;
+  }
+  .meta-row span { font-weight: 600; color: #1B6CA8; }
+
+  /* ── Section ── */
+  .section { margin-bottom: 11px; }
+  .section h2 {
+    font-size: 10pt;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: #fff;
+    background: #1B6CA8;
+    padding: 3px 8px;
+    border-radius: 3px;
+    margin-bottom: 5px;
+    display: inline-block;
+  }
+  .section p { margin-bottom: 4px; text-align: justify; font-size: 10pt; }
+
+  /* ── Two-col layout ── */
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+
+  /* ── Tools table ── */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 9.4pt;
+    margin-top: 2px;
+  }
+  th {
+    background: #e8f1fb;
+    color: #1B6CA8;
+    font-weight: 700;
+    padding: 4px 7px;
+    border: 1px solid #c5d8ef;
+    text-align: left;
+  }
+  td {
+    padding: 3px 7px;
+    border: 1px solid #dde8f5;
+    vertical-align: top;
+  }
+  tr:nth-child(even) td { background: #f6faff; }
+
+  /* ── Steps ── */
+  ol.steps { padding-left: 16px; font-size: 10pt; }
+  ol.steps li { margin-bottom: 3px; }
+  ol.steps li strong { color: #1B6CA8; }
+
+  /* ── Footer ── */
+  .footer {
+    margin-top: 10px;
+    border-top: 1px solid #c5d8ef;
+    padding-top: 5px;
+    font-size: 8pt;
+    color: #888;
+    display: flex;
+    justify-content: space-between;
+  }
+  .chip {
+    display: inline-block;
+    background: #e8f1fb;
+    color: #1B6CA8;
+    border-radius: 3px;
+    padding: 1px 6px;
+    font-size: 8.5pt;
+    font-weight: 600;
+    margin: 1px 2px;
+  }
+  .crisis-note {
+    background: #fff3f3;
+    border-left: 3px solid #e53935;
+    padding: 4px 8px;
+    font-size: 9pt;
+    color: #c62828;
+    border-radius: 0 3px 3px 0;
+    margin-top: 5px;
+  }
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<div class="header">
+  <h1>🧠 MindEase PRO</h1>
+  <div class="subtitle">AI-Powered Mental Health Support Chatbot — Project Report</div>
+  <div class="meta-row">
+    <div>Submitted by: <span>Omkar Chaithanya</span></div>
+    <div>Platform: <span>Elevate Labs</span></div>
+    <div>Date: <span>March 2026</span></div>
+  </div>
+</div>
+
+<!-- ABSTRACT -->
+<div class="section">
+  <h2>Abstract</h2>
+  <p>
+    MindEase PRO is a full-stack AI chatbot designed to provide accessible, empathetic mental health support.
+    It combines real-time emotion detection, Retrieval-Augmented Generation (RAG) with a Cognitive Behavioural
+    Therapy (CBT) knowledge base, voice input/output, mood tracking dashboards, and guided mindfulness exercises
+    — all served through a responsive single-page web application. The system detects seven emotions
+    (joy, sadness, fear, anger, disgust, surprise, neutral), applies a three-level crisis safety filter, and
+    adapts its tone based on user preferences. Text-to-Speech supports English, Hindi, Kannada, Tamil, and Telugu.
+  </p>
+</div>
+
+<!-- INTRODUCTION -->
+<div class="section">
+  <h2>Introduction</h2>
+  <p>
+    Mental health care faces a global accessibility gap — long wait times, cost barriers, and stigma prevent
+    millions from seeking help. Conversational AI offers a low-barrier first point of contact, available 24/7.
+    MindEase PRO addresses this by delivering a clinically-informed chatbot that is both technically robust and
+    emotionally aware.
+  </p>
+  <p>
+    The project integrates transformer-based NLP models with Flask's real-time WebSocket infrastructure,
+    a SQLite persistence layer, and a mobile-friendly dark-mode UI. It is packaged for local use, Docker
+    deployment, and cloud hosting (Render.com), with a public repository on GitHub.
+  </p>
+  <div class="crisis-note">
+    ⚠️ Disclaimer: MindEase PRO is a supportive tool, not a substitute for professional mental health care.
+    Crisis messages automatically surface 988 / 911 emergency resources.
+  </div>
+</div>
+
+<div class="two-col">
+<!-- TOOLS USED -->
+<div class="section">
+  <h2>Tools Used</h2>
+  <table>
+    <tr><th>Layer</th><th>Technology</th></tr>
+    <tr><td>Language</td><td>Python 3.11, JavaScript ES2022</td></tr>
+    <tr><td>Backend</td><td>Flask 3.0, Flask-SocketIO, SQLAlchemy 2.0</td></tr>
+    <tr><td>AI — Chat</td><td>BlenderBot-400M (HuggingFace)</td></tr>
+    <tr><td>AI — Emotion</td><td>DistilRoBERTa (j-hartmann)</td></tr>
+    <tr><td>AI — RAG</td><td>SentenceTransformers + FAISS</td></tr>
+    <tr><td>TTS</td><td>gTTS (Google Text-to-Speech)</td></tr>
+    <tr><td>STT</td><td>Web Speech API (browser)</td></tr>
+    <tr><td>Database</td><td>SQLite (WAL mode)</td></tr>
+    <tr><td>Charts</td><td>Chart.js 4.4</td></tr>
+    <tr><td>Real-time</td><td>Socket.IO 4.7</td></tr>
+    <tr><td>Deployment</td><td>Docker, Gunicorn, Render.com</td></tr>
+    <tr><td>Version Ctrl</td><td>Git, GitHub</td></tr>
+    <tr><td>IDE</td><td>VS Code + GitHub Copilot</td></tr>
+  </table>
+</div>
+
+<!-- STEPS -->
+<div class="section">
+  <h2>Steps Involved in Building</h2>
+  <ol class="steps">
+    <li><strong>Requirements Analysis</strong> — Identified core features: emotion-aware chat, mood tracking, exercises, crisis handling, and TTS.</li>
+    <li><strong>Architecture Design</strong> — Planned Flask REST + WebSocket backend, SPA frontend, SQLite DB schema with Users, MoodEntries, ChatMessages, and ExerciseLogs.</li>
+    <li><strong>AI Model Integration</strong> — Loaded DistilRoBERTa for emotion classification; BlenderBot-400M for conversation; MiniLM + FAISS for CBT knowledge retrieval.</li>
+    <li><strong>Safety Layer</strong> — Built a 3-level crisis filter with keyword matching and clinical overrides; integrated 988/911 resource cards.</li>
+    <li><strong>Backend Routes</strong> — Developed REST endpoints for chat, mood history, sessions, and exercises; added WebSocket streaming and session-based rate limiting.</li>
+    <li><strong>Frontend UI</strong> — Built 4-tab SPA (Chat, Mood, Exercises, Profile) with dark-mode CSS design system, Chart.js dashboards, and breathing exercise animations.</li>
+    <li><strong>TTS / STT</strong> — Wired gTTS backend (5 Indian languages) with browser SpeechSynthesis fallback; Web Speech API for voice input.</li>
+    <li><strong>Testing &amp; Bug Fixes</strong> — Ran live API tests; fixed 8+ bugs including FK constraints, session validation, crisis thresholds, and field mismatches.</li>
+    <li><strong>Packaging &amp; Deployment</strong> — Wrote Dockerfile, docker-compose, Procfile, .env.example; pushed to GitHub.</li>
+  </ol>
+  <div style="margin-top:6px;">
+    <strong style="font-size:9pt;color:#1B6CA8;">Key Features Delivered:</strong><br/>
+    <span class="chip">Emotion Detection</span>
+    <span class="chip">RAG / CBT</span>
+    <span class="chip">Crisis Safety</span>
+    <span class="chip">Mood Dashboard</span>
+    <span class="chip">Guided Exercises</span>
+    <span class="chip">TTS (IN Languages)</span>
+    <span class="chip">Voice Input</span>
+    <span class="chip">WebSocket Streaming</span>
+  </div>
+</div>
+</div>
+
+<!-- CONCLUSION -->
+<div class="section">
+  <h2>Conclusion</h2>
+  <p>
+    MindEase PRO successfully demonstrates how transformer-based NLP, RAG pipelines, and real-time web
+    technologies can be combined into a production-ready mental health support system. The application
+    detects emotional state, retrieves evidence-based CBT strategies, and responds empathetically — all
+    within a sub-second latency on consumer hardware. The inclusion of Indian language TTS (Kannada, Hindi,
+    Tamil, Telugu, English) makes it accessible to a broader audience.
+  </p>
+  <p>
+    Future enhancements could include a fine-tuned mental-health-specific LLM, therapist escalation
+    workflows, multi-user accounts, and mobile app packaging. The project is open-sourced on GitHub and
+    containerised for one-command deployment.
+  </p>
+</div>
+
+<!-- FOOTER -->
+<div class="footer">
+  <span>MindEase PRO · Elevate Labs · March 2026</span>
+  <span>github.com/Omkarchaithanya/-AI-Chatbot-for-Mental-Health-Support-elevate-labs-</span>
+</div>
+
+</body>
+</html>
