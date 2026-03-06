@@ -1,4 +1,4 @@
-# MindEase PRO 🧠
+# MindEase PRO 
 
 > An advanced AI-powered mental health support platform with real-time WebSocket streaming, voice I/O, CBT-informed RAG, mood tracking, and guided exercises.
 
