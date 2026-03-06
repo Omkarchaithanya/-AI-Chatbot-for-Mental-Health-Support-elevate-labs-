@@ -64,12 +64,16 @@ class EmotionDetector:
 
     def _load_pipeline(self) -> None:
         try:
+            import os
+            os.environ.setdefault("USE_TF", "0")
+            os.environ.setdefault("USE_FLAX", "0")
             from transformers import pipeline
             self._pipeline = pipeline(
                 "text-classification",
                 model=self.model_name,
-                return_all_scores=True,
-                device=-1,  # CPU
+                top_k=None,  # replaces deprecated return_all_scores=True
+                device=-1,   # CPU only
+                framework="pt",  # force PyTorch, skip TF
             )
             logger.info(f"EmotionDetector loaded: {self.model_name}")
         except Exception as exc:

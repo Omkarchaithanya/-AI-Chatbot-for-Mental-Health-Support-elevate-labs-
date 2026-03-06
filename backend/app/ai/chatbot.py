@@ -107,6 +107,9 @@ class MindEaseChatbot:
 
     def _load_model(self) -> None:
         try:
+            import os
+            os.environ.setdefault("USE_TF", "0")
+            os.environ.setdefault("USE_FLAX", "0")
             from transformers import AutoModelForSeq2SeqLM, AutoTokenizer
             logger.info(f"Loading chatbot model: {self.config.CHAT_MODEL}")
             self._tokenizer = AutoTokenizer.from_pretrained(self.config.CHAT_MODEL)

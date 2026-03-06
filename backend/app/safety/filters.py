@@ -26,11 +26,15 @@ _CRISIS_L3: list[str] = [
 _CRISIS_L2: list[str] = [
     r"\bhurt(ing)? myself\b", r"\bself.?harm\b", r"\bself.?injur\b",
     r"\bcut(ting)? myself\b", r"\bbur(n|ning) myself\b",
-    r"\bdon'?t want to (live|be here)\b",
+    r"\bdon'?t want to (live|be here|be alive)\b",
+    r"\bnot want(ing)? to (live|be here|be alive)\b",
+    r"\bi (don'?t|do not) want to be alive\b",
     r"\btired of (living|life|being alive)\b",
     r"\bno reason to (live|go on)\b",
     r"\b(thinking|thought) about (dying|death|ending it)\b",
     r"\bpassive suicid\b",
+    r"\bwish(ed)? (i was|i were|i am) dead\b",
+    r"\bdon'?t want to exist\b",
 ]
 
 _CRISIS_L1: list[str] = [
@@ -126,12 +130,13 @@ class AdvancedInputFilter:
         is_offensive = False
         if self._profanity:
             is_offensive = self._profanity.contains_profanity(clean_text)
-            # Override: clinical mental health terms are not offensive
+            # Override: clinical mental health and crisis terms are never offensive
             clinical_override = re.search(
-                r"\b(suicid|self.harm|depress|anxiety|trauma|mental health|therapy)\b",
+                r"\b(suicid|self.harm|depress|anxiety|trauma|mental health|therapy|"
+                r"kill myself|hurt myself|dying|die|alive|hopeless|worthless)\b",
                 clean_text, re.IGNORECASE
             )
-            if clinical_override:
+            if clinical_override or crisis_level > 0:
                 is_offensive = False
 
         # Keyword emotion detection

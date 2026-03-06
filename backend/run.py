@@ -2,6 +2,12 @@
 import os
 import sys
 
+# Disable TensorFlow / Flax backends in transformers to avoid Keras 3 conflicts.
+# Must be set before any transformers import occurs.
+os.environ.setdefault("USE_TF", "0")
+os.environ.setdefault("USE_FLAX", "0")
+os.environ.setdefault("TF_ENABLE_ONEDNN_OPTS", "0")
+
 # Ensure backend directory is in path
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
@@ -12,7 +18,10 @@ app = create_app()
 
 if __name__ == "__main__":
     config = Config()
-    print(f"🧠 MindEase PRO v{config.VERSION} starting on port {config.PORT}...")
+    # Use stdout with UTF-8 to avoid Windows cp1252 emoji encoding errors
+    import io
+    sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding="utf-8", errors="replace")
+    print(f"[MindEase PRO] v{config.VERSION} starting on port {config.PORT}...")
     print("   Loading AI models (this may take a minute on first run)...")
     socketio.run(
         app,
