@@ -42,6 +42,9 @@ class RAGEngine:
     def _load(self) -> None:
         logger.info("Initializing RAGEngine...")
         try:
+            import os
+            os.environ.setdefault("USE_TF", "0")
+            os.environ.setdefault("USE_FLAX", "0")
             from sentence_transformers import SentenceTransformer
             self._encoder = SentenceTransformer(self.config.EMBEDDING_MODEL)
         except Exception as exc:
